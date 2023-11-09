@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en" class="md:scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Bookmark landing page</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- css file -->
+  <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+      
+        <!-- header -->
+        <header>
+          <div
+            class="max-w-screen-xl flex justify-between items-center mx-auto py-8 px-6"
+          >
+          
+          <nav class="hidden md:flex justify-between items-center w-full">
+              <a href="#" class="logo">
+                <img src="images/logo-bookmark.svg" alt="logo" />
+              </a>
+              <ul class="md:flex items-center space-x-6">
+                <li>
+                  <a href="#features">Features</a>
+                </li>
+
+                <li>
+                  <a href="#pricing">Pricing</a>
+                </li>
+
+                <li>
+                  <a href="#contact">Contact</a>
+                </li>
+
+                <li>
+                  <a
+                    href="#"
+                    class="uppercase py-2 px-6 rounded bg-red-500 text-white"
+                    >Login</a
+                  >
+                </li>
+              </ul>
+
+            </nav>
+            <!-- Mobile -->
+            <div class="fixed left-0 top-0 py-8 w-full bg-blue-500 shadow-lg px-6 flex justify-between z-20 md:hidden">
+              <a href="#" class="logo">
+                <img src="images/logo-bookmark.svg" alt="logo" />
+              </a>
+
+              <button class="md:hidden" id="toggle-menu">
+                <img src="images/icon-hamburger.svg" alt="toggle-menu" />
+              </button>
+
+              <button class="md:hidden hidden" id="close-menu">
+                <img src="images/icon-close.svg" alt="toggle-menu" />
+              </button>
+            </div>
+            <nav class="md:hidden fixed left-0 top-0 h-screen w-full flex-col p-6 bg-darkBlue z-10 hidden" id="nav-content">
+              <ul class="text-center text-white mt-32">
+                <li class="py-4 border-y border-slate-300">
+                  <a href="#features">Features</a>
+                </li>
+
+                <li class="py-4 border-y border-slate-300">
+                  <a href="#pricing">Pricing</a>
+                </li>
+
+                <li class="py-4 border-y border-slate-300">
+                  <a href="#contact">Contact</a>
+                </li>
+
+                <li class="py-4 mt-4">
+                  <a
+                    href="#"
+                    class="block uppercase py-2 px-6 rounded bg-transparent border-2 text-white"
+                    >Login</a
+                  >
+                </li>
+              </ul>
+
+              <div class="flex justify-center mt-auto gap-8">
+                <a href="#">
+                  <img src="images/icon-facebook.svg" alt="facebook">
+                </a>
+                <a href="#">
+                  <img src="images/icon-twitter.svg" alt="twitter">
+                </a>
+              </div>
+            </nav>
+          </div>
+        </header>
+        <!-- hero section -->
+        <section class="hero mt-10">
+          <div
+            class="full-width-split-screen grid section-min-height"
+          >
+            <div class="text-center md:text-left">
+              <h1 class="text-3xl lg:text-5xl font-bold mb-6">
+                A Simple Bookmark Manager
+              </h1>
+              <p class="max-w-md mx-auto md:mx-0 text-slate-600 mb-6">
+                A clean and simple interface to organize your favourite
+                websites. Open a new browser tab and see your sites load
+                instantly. Try it for free.
+              </p>
+              <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                <button
+                  class="bg-blue-700 border border-blue-700 shadow-xl text-white font-medium hover:bg-white hover:text-blue-700 px-6 py-3 rounded duration-500"
+                >
+                  Get it on Chrome
+                </button>
+                <button
+                  class="btn bg-slate-200 border border-slate-200 shadow-xl font-medium hover:bg-white hover:border-black px-6 py-3 rounded duration-500"
+                >
+                  Get it on Firefox
+                </button>
+              </div>
+            </div>
+            <div class="image before:rounded-bl-[10rem]">
+              <img class="mx-auto md:mx-0" src="images/illustration-hero.svg" alt="" />
+            </div>
+          </div>
+        </section>
+
+        <main>
+          <!-- single section -->
+          <section class="mt-14 scroll-mt-6" id="features">
+            <div class="md:section-min-height">
+              <h2 class="text-2xl font-bold text-center mb-6">Features</h2>
+              <p class="max-w-md mx-auto text-center text-slate-600 mb-6">
+                Our aim is to make it quick and easy for you to access your
+                favourite websites. Your bookmarks sync between your devices so
+                you can access them on the go.
+              </p>
+              <div
+                class="flex flex-col md:flex-row justify-center md:w-fit md:mx-auto md:border-b-2"
+              >
+                <button class="border-b-2 md:border-0" id="featuresBtn" data-number="0"
+                  ><span class="inline-block border-red-600 border-b-4 px-0 py-4 md:px-6">Simple Bookmarking</span></button
+                >
+                <button class="border-b-2 md:border-0" id="featuresBtn" data-number="1"
+                  ><span class="inline-block border-red-600 px-0 py-4 md:px-6">Speedy Searching</span></button
+                >
+                <button class="border-b-2 md:border-0" id="featuresBtn" data-number="2"
+                  ><span class="inline-block border-red-600 px-0 py-4 md:px-6">Easy Sharing</span></button
+                >
+              </div>
+              <div class="full-width-split-screen px-6 sm:p-0 gap-8 grid mt-8" id="feature-slide">
+                <div class="image before:rounded-br-[10rem] pb-12">
+                  <img class="mx-auto md:mx-0 md:w-full" src="images/illustration-features-tab-1.svg" alt="" />
+                </div>
+                <div class="justify-self-center text-center md:text-left mt-8 md:mt-0">
+                  <h2 class="text-3xl font-bold mb-6">Bookmark in one click</h2>
+                  <p class="max-w-sm mx-auto md:mx-0 text-slate-600 mb-8">
+                    Organize your bookmarks however you like. Our simple
+                    drag-and-drop interface gives you complete control over how
+                    you manage your favourite sites.
+                  </p>
+
+                  <a
+                    href="#"
+                    class="bg-blue-700 text-white hover:bg-blue-900 duration-500 px-6 py-3 rounded"
+                    >More Info</a
+                  >
+                </div>
+              </div>
+              <!-- single article -->
+              <div class="full-width-split-screen px-6 sm:p-0 gap-8 mt-8 hidden" id="feature-slide">
+                <div class="image before:rounded-br-[10rem] pb-12">
+                  <img class="mx-auto md:mx-0 md:w-full" src="images/illustration-features-tab-2.svg" alt="" />
+                </div>
+                <div class="justify-self-center text-center md:text-left mt-8 md:mt-0">
+                  <h2 class="text-3xl font-bold mb-6">Intelligent search</h2>
+                  <p class="max-w-sm mx-auto md:mx-0 text-slate-600 mb-8">
+                    Our powerful search feature will help you find saved sites in no time at all. 
+                    No need to trawl through all of your bookmarks.
+                  </p>
+
+                  <a
+                    href="#"
+                    class="bg-blue-700 text-white hover:bg-blue-900 duration-500 px-6 py-3 rounded"
+                    >More Info</a
+                  >
+                </div>
+              </div>
+              <!-- single article -->
+              <div class="full-width-split-screen px-6 sm:p-0 gap-8 mt-8 hidden" id="feature-slide">
+                <div class="image before:rounded-br-[10rem] pb-12">
+                  <img class="mx-auto md:mx-0 md:w-full" src="images/illustration-features-tab-3.svg" alt="" />
+                </div>
+                <div class="justify-self-center text-center md:text-left mt-8 md:mt-0">
+                  <h2 class="text-3xl font-bold mb-6">Share your bookmarks</h2>
+                  <p class="max-w-sm mx-auto md:mx-0 text-slate-600 mb-8">
+                    Easily share your bookmarks and collections with others. Create a shareable 
+                    link that you can send at the click of a button.
+                  </p>
+
+                  <a
+                    href="#"
+                    class="bg-blue-700 text-white hover:bg-blue-900 duration-500 px-6 py-3 rounded"
+                    >More Info</a
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- single section -->
+          <section class="mt-20">
+            <div class="max-w-screen-xl md:section-min-height mx-auto px-6">
+              <h2 class="text-2xl font-bold text-center mb-6">
+                Download the extension
+              </h2>
+              <p class="max-w-md mx-auto text-center text-slate-600 mb-6">
+                We’ve got more browsers in the pipeline. Please do let us know
+                if you’ve got a favourite you’d like us to prioritize.
+              </p>
+              <div
+                class="flex flex-col md:flex-row md:justify-center flex-wrap gap-8 mt-8"
+              >
+                <div class="h-fit text-center bg-white shadow-2xl p-6">
+                  <img
+                    class="mx-auto mb-8"
+                    src="images/logo-chrome.svg"
+                    alt="Chrome"
+                  />
+                  <h3 class="text-2xl font-medium mb-2">Add to Chrome</h3>
+                  <p class="text-slate-700 mb-8">Minimum version 62</p>
+                  <img class="mb-6" src="images/bg-dots.svg" alt="dots" />
+                  <a
+                    href="#"
+                    class="block bg-blue-700 hover:bg-blue-900 text-white py-4 rounded-md duration-500"
+                    >Add & Install Extension</a
+                  >
+                </div>
+
+                <div class="h-fit md:mt-12 text-center bg-white shadow-2xl p-6">
+                  <img
+                    class="mx-auto mb-8"
+                    src="images/logo-firefox.svg"
+                    alt="firefox"
+                  />
+                  <h3 class="text-2xl font-medium mb-2">Add to Firefox</h3>
+                  <p class="text-slate-700 mb-8">Minimum version 55</p>
+                  <img class="mb-6" src="images/bg-dots.svg" alt="dots" />
+                  <a
+                    href="#"
+                    class="block bg-blue-700 hover:bg-blue-900 text-white py-4 rounded-md duration-500"
+                    >Add & Install Extension</a
+                  >
+                </div>
+
+                <div class="h-fit md:mt-24 text-center bg-white shadow-2xl p-6">
+                  <img
+                    class="mx-auto mb-8"
+                    src="images/logo-opera.svg"
+                    alt="opera"
+                  />
+                  <h3 class="text-2xl font-medium mb-2">Add to Opera</h3>
+                  <p class="text-slate-700 mb-8">Minimum version 46</p>
+                  <img class="mb-6" src="images/bg-dots.svg" alt="dots" />
+                  <a
+                    href="#"
+                    class="block bg-blue-700 hover:bg-blue-900 text-white py-4 rounded-md duration-500"
+                    >Add & Install Extension</a
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- FAQs section -->
+          <section class="mt-20">
+            <div class="max-w-screen-xl md:section-min-height mx-auto px-6">
+              <h2 class="text-2xl font-bold text-center mb-6">
+                Frequently Asked Questions
+              </h2>
+              <p class="max-w-md mx-auto text-center text-slate-600 mb-6">
+                Here are some of our FAQs. If you have any other questions you’d
+                like answered please feel free to email us.
+              </p>
+              <ul class="max-w-xl mx-auto mt-12 md:pl-11">
+                <li class="py-4 border-t-2">
+                  <div class="flex justify-between items-center cursor-pointer" id="question-head">
+                    <h3 class="text-base md:text-xl">What is Bookmark?</h3>
+                    <img src="images/icon-arrow.svg" alt="" />
+                  </div>
+                  <p class="description hidden mt-4 text-slate-700" id="question-content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Fusce tincidunt justo eget ultricies fringilla. Phasellus
+                    blandit ipsum quis quam ornare mattis.
+                  </p>
+                </li>
+
+                <li class="py-4 border-t-2">
+                  <div class="flex justify-between items-center cursor-pointer" id="question-head">
+                    <h3 class="text-base md:text-xl">
+                      How can I request a new browser?
+                    </h3>
+                    <img src="images/icon-arrow.svg" alt="" />
+                  </div>
+                  <p class="description hidden mt-4 text-slate-700" id="question-content">
+                    Vivamus luctus eros aliquet convallis ultricies. Mauris
+                    augue massa, ultricies non ligula. Suspendisse imperdiet.
+                    Vivamus luctus eros aliquet convallis ultricies. Mauris
+                    augue massa, ultricies non ligula. Suspendisse imperdie
+                    tVivamus luctus eros aliquet convallis ultricies. Mauris
+                    augue massa, ultricies non ligula. Suspendisse imperdiet.
+                  </p>
+                </li>
+
+                <li class="py-4 border-t-2">
+                  <div class="flex justify-between items-center cursor-pointer" id="question-head">
+                    <h3 class="text-base md:text-xl">Is there a mobile app?</h3>
+                    <img src="images/icon-arrow.svg" alt="" />
+                  </div>
+                  <p class="description hidden mt-4 text-slate-700" id="question-content">
+                    Sed consectetur quam id neque fermentum accumsan. Praesent
+                    luctus vestibulum dolor, ut condimentum urna vulputate eget.
+                    Cras in ligula quis est pharetra mattis sit amet pharetra
+                    purus. Sed sollicitudin ex et ultricies bibendum.
+                  </p>
+                </li>
+
+                <li class="py-4 border-t-2">
+                  <div class="flex justify-between items-center cursor-pointer" id="question-head">
+                    <h3 class="text-base md:text-xl">
+                      What about other Chromium browsers?
+                    </h3>
+                    <img src="images/icon-arrow.svg" alt="" />
+                  </div>
+                  <p class="description hidden mt-4 text-slate-700">
+                    Integer condimentum ipsum id imperdiet finibus. Vivamus in
+                    placerat mi, at euismod dui. Aliquam vitae neque eget nisl
+                    gravida pellentesque non ut velit.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <!-- single section -->
+          <section class="mt-20 py-12 bg-blue-800 text-white">
+            <div class="max-w-lg mx-auto px-4 text-center">
+              <p class="uppercase tracking-widest">35,000+ already joined</p>
+              <h2 class="text-3xl md:text-4xl font-medium mt-4 mb-8">
+                Stay up-to-date with what we’re doing
+              </h2>
+              <form
+                action=""
+                class="flex flex-col md:flex-row justify-center gap-4"
+              >
+                <input
+                  class="flex-1 bg-white text-slate-700 p-3 rounded-md outline-none"
+                  type="email"
+                  name=""
+                  id=""
+                  placeholder="Enter Your Email Address"
+                />
+                <button
+                  class="bg-red-500 hover:bg-white hover:text-red-500 text-white font-medium py-3 px-6 rounded-md duration-500"
+                  href="#"
+                >
+                  Contact Us
+                </button>
+              </form>
+            </div>
+          </section>
+        </main>
+        <script src="js/main.js"></script>
+
+    <footer class="bg-blue-950">
+      <div
+        class="max-w-screen-xl mx-auto flex flex-col md:flex-row md:justify-between items-center gap-8 p-6"
+      >
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-8 md:w-1/2"
+        >
+          <a href="#" class="logo">
+            <img src="images/logo-bookmark.svg" alt="logo" />
+          </a>
+          <div class="flex flex-col md:flex-row gap-4 text-slate-300">
+            <a href="#">Features</a>
+            <a href="#">Pricing</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 md:w-1/2 md:justify-end">
+          <a href="#"><img src="images/icon-facebook.svg" alt="facebook" /></a>
+          <a href="#"><img src="images/icon-twitter.svg" alt="twitter" /></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
