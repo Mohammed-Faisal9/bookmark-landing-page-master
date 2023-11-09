@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./bookmark-landing-page-master/*.html', './bookmark-landing-page-master/js/*.js'],
+  content: ['./*.html', './js/*.js'],
   theme: {
     extend: {
       colors: {
